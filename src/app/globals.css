@@ -155,9 +155,18 @@ button {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.5px;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .lang-toggle {

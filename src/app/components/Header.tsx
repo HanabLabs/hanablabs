@@ -9,7 +9,10 @@ export default function Header({ language, onLanguageChange }: HeaderProps) {
     return (
         <header className="header">
             <div className="container header-content">
-                <div className="logo">hanab labs</div>
+                <div className="logo">
+                    <img src="/icon.png" alt="hanab labs logo" className="logo-icon" />
+                    hanab labs
+                </div>
                 <div className="lang-toggle">
                     <button
                         className={`lang-button ${language === 'ja' ? 'active' : ''}`}
