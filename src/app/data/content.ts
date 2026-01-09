@@ -29,6 +29,12 @@ export const content: Record<Language, Content> = {
                     icon: '/Quietly.png',
                     link: 'https://quietly.hanablabs.com',
                 },
+                {
+                    name: 'FocusDock',
+                    description: '日々の積み重ねを、自信に変える',
+                    icon: '/focusdock.png',
+                    link: 'https://focusdock.hanablabs.com',
+                },
             ],
         },
         writing: {
@@ -94,6 +100,12 @@ export const content: Record<Language, Content> = {
                     description: 'Do one small thing a little better today',
                     icon: '/Quietly.png',
                     link: 'https://quietly.hanablabs.com',
+                },
+                {
+                    name: 'FocusDock',
+                    description: 'Building confidence, one day at a time',
+                    icon: '/focusdock.png',
+                    link: 'https://focusdock.hanablabs.com',
                 },
             ],
         },
