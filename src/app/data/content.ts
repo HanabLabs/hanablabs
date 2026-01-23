@@ -12,7 +12,7 @@ export const content: Record<Language, Content> = {
             },
         },
         projects: {
-            title: 'Projects',
+            title: 'プロダクト一覧',
             items: [
                 {
                     name: 'ECHO',
@@ -35,7 +35,7 @@ export const content: Record<Language, Content> = {
             ],
         },
         writing: {
-            title: 'Writing',
+            title: '記事一覧',
             items: [
                 {
                     title: 'ブロックチェーンを支える「電子署名」の仕組みを徹底解説',
@@ -45,7 +45,7 @@ export const content: Record<Language, Content> = {
             ],
         },
         services: {
-            title: '提供サービス一覧',
+            title: 'サービス一覧',
             items: [
                 {
                     name: '要件・仕様整理のお手伝い',
@@ -55,7 +55,7 @@ export const content: Record<Language, Content> = {
             ],
         },
         contact: {
-            title: 'Contact',
+            title: 'お問い合わせ',
             message: '何かありましたら、お気軽にご連絡ください。',
             email: 'hanab.labs@gmail.com',
         },
