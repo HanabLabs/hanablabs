@@ -16,6 +16,13 @@ export interface Article {
   link: string;
 }
 
+// 外部サービスの型定義
+export interface Service {
+  name: string;
+  description: string;
+  link: string;
+}
+
 // コンテンツの型定義
 export interface Content {
   header: {
@@ -24,9 +31,6 @@ export interface Content {
       en: string;
     };
   };
-  hero: {
-    tagline: string;
-  };
   projects: {
     title: string;
     items: Project[];
@@ -34,6 +38,10 @@ export interface Content {
   writing: {
     title: string;
     items: Article[];
+  };
+  services: {
+    title: string;
+    items: Service[];
   };
   contact: {
     title: string;

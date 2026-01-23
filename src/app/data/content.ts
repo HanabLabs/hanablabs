@@ -11,9 +11,6 @@ export const content: Record<Language, Content> = {
                 en: 'English',
             },
         },
-        hero: {
-            tagline: '生きた証を、プロダクトにする。',
-        },
         projects: {
             title: 'Projects',
             items: [
@@ -41,19 +38,19 @@ export const content: Record<Language, Content> = {
             title: 'Writing',
             items: [
                 {
-                    title: '気持ちをうまく言えない人のための、ECHOという試み',
-                    description: '『ECHO』着想編',
-                    link: 'https://note.com/hanablabs/n/na443ce81fe66?sub_rt=share_sb',
+                    title: 'ブロックチェーンを支える「電子署名」の仕組みを徹底解説',
+                    description: '電子署名の仕組みをわかりやすく解説しています。',
+                    link: 'https://note.com/hanablabs/n/n3427abf16500?sub_rt=share_sb',
                 },
+            ],
+        },
+        services: {
+            title: '提供サービス一覧',
+            items: [
                 {
-                    title: '最適化しないAIを作るための人格設計',
-                    description: '『ECHO』設計編',
-                    link: 'https://note.com/hanablabs/n/n81a78a7fcfd3?sub_rt=share_sb',
-                },
-                {
-                    title: 'AIに命令しないためのプロンプト設計',
-                    description: '『ECHO』プロンプト編',
-                    link: 'https://note.com/hanablabs/n/n950aef3ac560?sub_rt=share_sb',
+                    name: '要件・仕様整理のお手伝い',
+                    description: 'あなたのビジネスに必要な要件や仕様を整理します。',
+                    link: 'https://coconala.com/services/4034984',
                 },
             ],
         },
@@ -83,9 +80,6 @@ export const content: Record<Language, Content> = {
                 en: 'English',
             },
         },
-        hero: {
-            tagline: 'Turning life into products.',
-        },
         projects: {
             title: 'Projects',
             items: [
@@ -113,19 +107,19 @@ export const content: Record<Language, Content> = {
             title: 'Writing',
             items: [
                 {
-                    title: '気持ちをうまく言えない人のための、ECHOという試み',
-                    description: '『ECHO』着想編',
-                    link: 'https://note.com/hanablabs/n/na443ce81fe66?sub_rt=share_sb',
+                    title: 'ブロックチェーンを支える「電子署名」の仕組みを徹底解説',
+                    description: '電子署名の仕組みをわかりやすく解説しています。',
+                    link: 'https://note.com/hanablabs/n/n3427abf16500?sub_rt=share_sb',
                 },
+            ],
+        },
+        services: {
+            title: 'Services',
+            items: [
                 {
-                    title: '最適化しないAIを作るための人格設計',
-                    description: '『ECHO』設計編',
-                    link: 'https://note.com/hanablabs/n/n81a78a7fcfd3?sub_rt=share_sb',
-                },
-                {
-                    title: 'AIに命令しないためのプロンプト設計',
-                    description: '『ECHO』プロンプト編',
-                    link: 'https://note.com/hanablabs/n/n950aef3ac560?sub_rt=share_sb',
+                    name: 'Requirement & Specification Assistance',
+                    description: 'Help your business requirements and specifications.',
+                    link: 'https://coconala.com/services/4034984',
                 },
             ],
         },

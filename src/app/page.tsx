@@ -7,6 +7,7 @@ import { content } from './data/content';
 import Header from './components/Header';
 import ProjectCard from './components/ProjectCard';
 import WritingCard from './components/WritingCard';
+import ServiceCard from './components/ServiceCard';
 
 export default function Home() {
   const [language, setLanguage] = useState<Language>('ja');
@@ -38,15 +39,6 @@ export default function Home() {
       <Header language={language} onLanguageChange={handleLanguageChange} />
 
       <main>
-        {/* ヒーローセクション */}
-        <section className="hero section">
-          <div className="container">
-            <h1 className="hero-tagline fade-in-up">
-              {currentContent.hero.tagline}
-            </h1>
-          </div>
-        </section>
-
         {/* プロジェクトセクション */}
         <section className="section">
           <div className="container">
@@ -76,6 +68,24 @@ export default function Home() {
                 <WritingCard
                   key={index}
                   article={article}
+                  delay={(index % 6) + 2}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 提供サービスセクション */}
+        <section className="section">
+          <div className="container">
+            <h2 className="section-title fade-in-up delay-1">
+              {currentContent.services.title}
+            </h2>
+            <div className="services-grid">
+              {currentContent.services.items.map((service, index) => (
+                <ServiceCard
+                  key={index}
+                  service={service}
                   delay={(index % 6) + 2}
                 />
               ))}

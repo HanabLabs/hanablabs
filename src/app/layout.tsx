@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "hanab labs | 生きた証を、プロダクトにする。",
-  description: "プロダクトと思考をまとめた個人サイト",
+  title: "hanab labs",
+  description: "プロダクトと技術記事をまとめた個人サイト",
   openGraph: {
     title: "hanab labs",
-    description: "生きた証を、プロダクトにする。",
+    description: "プロダクト・技術記事まとめ",
     type: "website",
   },
 };
