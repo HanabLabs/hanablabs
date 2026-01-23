@@ -133,6 +133,10 @@ button {
   margin-bottom: var(--section-gap);
 }
 
+main {
+  padding-top: 80px;
+}
+
 /* ========================================
    ヘッダー
    ======================================== */
@@ -463,8 +467,8 @@ button {
     padding: 0 20px;
   }
 
-  .hero {
-    padding: 60px 0 40px;
+  main {
+    padding-top: 48px;
   }
 
   .projects-grid,
