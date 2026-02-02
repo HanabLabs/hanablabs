@@ -37,16 +37,6 @@ export const content: Record<Language, Content> = {
                 },
             ],
         },
-        services: {
-            title: 'サービス一覧',
-            items: [
-                {
-                    name: '要件・仕様整理のお手伝い',
-                    description: 'あなたのビジネスに必要な要件や仕様を整理します。',
-                    link: 'https://coconala.com/services/4034984',
-                },
-            ],
-        },
         contact: {
             title: 'お問い合わせ',
             message: '何かありましたら、お気軽にご連絡ください。',
