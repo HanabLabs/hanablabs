@@ -39,7 +39,7 @@ const NOTE_ARTICLES = [
   },
   {
     title: "coming soon...",
-    description: "記事の概要をここに書きます。",
+    description: "新しい記事を執筆中です🌸",
     url: "",
   },
 ];
