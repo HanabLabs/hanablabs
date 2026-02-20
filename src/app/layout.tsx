@@ -17,7 +17,21 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: "hanab",
-  description: "hanab's personal site",
+  description: "note執筆・個人開発をしています",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://hanab.me"
+  ),
+  openGraph: {
+    title: "hanab",
+    description: "note執筆・個人開発をしています",
+    type: "website",
+    locale: "ja_JP",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "hanab",
+    description: "note執筆・個人開発をしています",
+  },
 };
 
 export default function RootLayout({

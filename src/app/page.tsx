@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 
 // ─────────────────────────────────────────────
-// ここを編集してください — Products
+// Products
 // ─────────────────────────────────────────────
 const PRODUCTS = [
   {
@@ -19,7 +19,7 @@ const PRODUCTS = [
 ];
 
 // ─────────────────────────────────────────────
-// ここを編集してください — Note 記事
+// Note 記事
 // ─────────────────────────────────────────────
 const NOTE_ARTICLES = [
   {
@@ -68,7 +68,7 @@ const POPUP_NOTES = [
   },
 ];
 
-// ─── シードベースの疑似乱数（SSR/CSR で同じ値を生成してHydrationエラーを防ぐ）
+
 function makePRNG(seed: number) {
   let s = seed >>> 0;
   return () => {
