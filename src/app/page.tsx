@@ -51,7 +51,7 @@ const POPUP_NOTES = [
   {
     header: "✦ coming soon... ✦",
     title: "名称未定",
-    description: "遊べる猫育成ゲームを製作中🐈",
+    description: "猫育成ゲームを製作中🐈",
     url: "",
   },
   {
