@@ -1,30 +1,33 @@
 import type { Metadata } from "next";
+import { Zen_Maru_Gothic, Nunito } from "next/font/google";
 import "./globals.css";
 
+const zenMaruGothic = Zen_Maru_Gothic({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-zen-maru",
+  display: "swap",
+});
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "hanab labs",
-  description: "プロダクトと技術記事をまとめた個人サイト",
-  openGraph: {
-    title: "hanab labs",
-    description: "プロダクト・技術記事まとめ",
-    type: "website",
-  },
+  title: "hanab",
+  description: "hanab's personal site",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="ja">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
-      <body>
-        {children}
-      </body>
+    <html lang="ja" className={`${zenMaruGothic.variable} ${nunito.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
