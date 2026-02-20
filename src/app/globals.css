@@ -53,6 +53,8 @@ body {
 .popup-window {
   position: fixed;
   width: 300px;
+  height: fit-content;
+  max-height: 80dvh;
   border: 2px solid var(--color-accent);
   border-radius: 12px;
   overflow: hidden;

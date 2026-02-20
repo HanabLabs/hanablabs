@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
+import { createPortal } from "react-dom";
 
 // ─────────────────────────────────────────────
 // Products
@@ -152,14 +153,16 @@ function Popup({
       const rect = ref.current.getBoundingClientRect();
       const ox = startX - rect.left;
       const oy = startY - rect.top;
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
       let lastSparkle = 0;
 
       const onMove = (cx: number, cy: number) => {
         if (!ref.current) return;
         const nx = cx - ox;
         const ny = cy - oy;
-        const maxX = window.innerWidth - ref.current.offsetWidth;
-        const maxY = window.innerHeight - ref.current.offsetHeight;
+        const maxX = vw - ref.current.offsetWidth;
+        const maxY = vh - ref.current.offsetHeight;
         ref.current.style.left = Math.max(0, Math.min(nx, maxX)) + "px";
         ref.current.style.top = Math.max(0, Math.min(ny, maxY)) + "px";
         const now = Date.now();
@@ -299,7 +302,7 @@ function CardSection({ title, items, maxVisible }: { title: string; items: CardI
           もっと見る ↓
         </button>
       )}
-      {showModal && (
+      {showModal && createPortal(
         <div className="modal-overlay" onClick={() => setShowModal(false)}>
           <div className="modal-box" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
@@ -310,7 +313,8 @@ function CardSection({ title, items, maxVisible }: { title: string; items: CardI
               <CardGrid items={items} />
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
