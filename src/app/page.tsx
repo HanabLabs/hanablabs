@@ -7,14 +7,14 @@ import { useEffect, useRef, useState, useCallback } from "react";
 // ─────────────────────────────────────────────
 const PRODUCTS = [
   {
+    title: "TypeScript命名規約チェッカー",
+    description: "「TypeScript Naming Convention Checker」というvscodeの拡張機能です。",
+    url: "https://marketplace.visualstudio.com/items?itemName=hanablabs001.naming-convention-checker",
+  },
+  {
     title: "coming soon...",
     description: "chromeで遊べる猫育成ゲームを製作中です🐈",
     url: "",
-  },
-  {
-    title: "プロダクト2",
-    description: "説明をここに書きます。",
-    url: "https://example.com",
   },
 ];
 
@@ -23,24 +23,24 @@ const PRODUCTS = [
 // ─────────────────────────────────────────────
 const NOTE_ARTICLES = [
   {
-    title: "記事タイトル1",
-    description: "記事の概要をここに書きます。",
+    title: "伝わる議事録の書き方",
+    description: "会議に出ていない人にも伝わる議事録の書き方をご紹介しています。",
     url: "https://note.com/hn_a_b",
   },
   {
-    title: "記事タイトル2",
-    description: "記事の概要をここに書きます。",
-    url: "https://note.com/hn_a_b",
+    title: "電子署名の仕組みについて",
+    description: "「わかりそうでわからない」電子署名について解説しています。",
+    url: "https://note.com/hn_a_b/n/n3427abf16500?sub_rt=share_sb",
   },
   {
-    title: "記事タイトル3",
-    description: "記事の概要をここに書きます。",
-    url: "https://note.com/hn_a_b",
+    title: "DB設計を基礎からわかりやすく",
+    description: "データベース設計について初学者向けにわかりやすく解説しています。",
+    url: "https://note.com/hn_a_b/n/n9b5a004a0536?sub_rt=share_sb",
   },
   {
-    title: "記事タイトル4",
+    title: "coming soon...",
     description: "記事の概要をここに書きます。",
-    url: "https://note.com/hn_a_b",
+    url: "",
   },
 ];
 
@@ -49,22 +49,22 @@ const NOTE_ARTICLES = [
 // ─────────────────────────────────────────────
 const POPUP_NOTES = [
   {
-    header: "✦ new note ✦",
-    title: "記事タイトル1",
-    description: "記事の一言説明をここに書きます。",
-    url: "https://note.com/yourhandle/n/xxxxxxxx1",
+    header: "✦ coming soon... ✦",
+    title: "名称未定",
+    description: "遊べる猫育成ゲームを製作中🐈",
+    url: "",
   },
   {
-    header: "✦ new note ✦",
-    title: "記事タイトル2",
-    description: "記事の一言説明をここに書きます。",
-    url: "https://note.com/yourhandle/n/xxxxxxxx2",
+    header: "✦ twitter ✦",
+    title: "私の家の猫",
+    description: "可愛い下からアングルの画像を公開中",
+    url: "https://x.com/hn_a_b/status/2024422437946089945?s=20",
   },
   {
-    header: "✦ new note ✦",
-    title: "記事タイトル3",
-    description: "記事の一言説明をここに書きます。",
-    url: "https://note.com/yourhandle/n/xxxxxxxx3",
+    header: "✦ notice ✦",
+    title: "画面をクリックしてみて！",
+    description: "画面をクリックしたり、ポップアップを移動させるとキラキラのエフェクトがでるよ☆",
+    url: "",
   },
 ];
 
@@ -238,7 +238,7 @@ function Popup({
         <div className="flex gap-3 justify-end">
           <button
             className="popup-btn popup-btn-yes"
-            onClick={() => window.open(popup.url, "_blank")}
+            onClick={() => popup.url ? window.open(popup.url, "_blank") : onClose(popup.id)}
             onMouseDown={stopDrag}
             onTouchStart={stopDrag}
           >
