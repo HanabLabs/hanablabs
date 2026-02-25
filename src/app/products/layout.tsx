@@ -6,11 +6,17 @@ export default function ProductsLayout({
   return (
     <>
       <style>{`
-        html, body { overflow: auto !important; height: auto !important; }
         * { cursor: auto !important; }
         a, button { cursor: pointer !important; }
       `}</style>
-      {children}
+      <div style={{
+        position: "fixed",
+        inset: 0,
+        overflowY: "auto",
+        backgroundColor: "#fff",
+      }}>
+        {children}
+      </div>
     </>
   );
 }
